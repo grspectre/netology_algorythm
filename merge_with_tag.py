@@ -23,6 +23,7 @@ def main() ->  None:
         print('prd last commit and dev last dev commit are identical. exit')
         return
     execute('git tag -a {tag} -m "tag {tag}"'.format(tag=cur_head_commit))
+    execute('git push --all')
     execute('git push --tags')
 
 if __name__ == '__main__':
